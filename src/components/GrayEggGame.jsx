@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import sound from '../sounds/G.wav'
 
-// import Scoreboard from "./Scoreboard"
+import Scoreboard from "./Scoreboard"
 class GrayEggGame extends Component {
     constructor(props) {
         super(props)
         this.state = {
             render: false,
-            eggclick: false
+            scoreScreen: false
         }
     }
 
@@ -19,13 +19,14 @@ class GrayEggGame extends Component {
 
     handleWandClick = (event) => {
         if (event.target.id === 'yellow') {
-           this.pickWand.innerText = 'You Got It!'
+           this.setState = {scoreScreen: true}
         } else {
             this.pickWand.innerText = 'Try Again!'
         }
     }
 
-    render() {
+    render(){ 
+    if (!this.state.scoreScreen) {
         const wandArray = [
             'white',
             'black',
@@ -66,7 +67,14 @@ class GrayEggGame extends Component {
                 </div>
             </div>
         )
+    } else {
+        return (
+            <div>
+                <Scoreboard />
+            </div>
+        )
     }
+}
 }
 
 export default GrayEggGame

@@ -5,7 +5,8 @@ class MenuPage extends Component{
     constructor(props){
         super(props)
         this.state={
-            renderEggGame: false
+            renderEggGame: false,
+            scoreScreen: false
         }
     }
     
@@ -18,15 +19,16 @@ class MenuPage extends Component{
 
     render(){
         var renderEggGame = this.state.renderEggGame
+        if (){
         return(
             <div>
-            {renderEggGame ? <GrayEggGame /> :
+                <GrayEggGame /> :
             <div className='start'>
                 <p className='startButton' onClick={this.logClick}>Start</p>
             </div>
             }
             </div>
-        )
+        )}
     }
 }
 
