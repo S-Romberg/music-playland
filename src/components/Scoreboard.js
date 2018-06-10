@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Scoreboard from "../images/scorescreen.jpg"
+import ScoreboardImage from "../images/scorescreen.jpg"
 
 class Scoreboard extends Component{
     constructor(props){
@@ -14,13 +14,14 @@ class Scoreboard extends Component{
         event.preventDefault()
         this.setState({
             renderNextLevel: !this.state.renderNextLevel
+        })
     }
 
     render(){
         // var renderNextLevel = this.state.renderNextLevel
         return( 
             <div className='scoreboard'> 
-                <img src={Scoreboard} className="scoreboard-img"/>
+                <img src={ScoreboardImage} className="scoreboard-img"/>
             </div>
         )
     }
