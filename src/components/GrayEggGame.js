@@ -13,7 +13,7 @@ class GrayEggGame extends Component{
     render(){
         return(
             <div className='egg-game'>
-                <img src={require('../images/eggonly.png')} className="egg-only"/>
+                <img src={require('../images/eggonly.png')} class="egg-only"/>
             </div>
         )
     }
