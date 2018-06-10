@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Egg from "../images/eggonly.png"
+import Egg from "../images/onlyegg.png"
 import Scoreboard from "./Scoreboard"
 
 class GrayEggGame extends Component{
@@ -10,10 +10,14 @@ class GrayEggGame extends Component{
         }
     }
 
+    handleClick = (event) => {
+        console.log('I was clicked yo')
+    }
+
     render(){
         return(
             <div className='egg-game'>
-                <img src={require('../images/eggonly.png')} className="egg-only"/>
+                <img src={require('../images/onlyegg.png')} className="egg-only" onClick={this.handleClick}/>
             </div>
         )
     }

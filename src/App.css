@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-header{
+header {
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: 25% 50% 15%;
@@ -26,7 +26,7 @@ header h1 {
   justify-content: center;
 }
 
-.music-elements img{
+.music-elements img {
   height: 93vh;
   width: 100vw;
 }
@@ -36,6 +36,7 @@ footer {
   bottom: 0;
   padding: 5px;
 }
+
 .null {
   display: null
 }
@@ -43,11 +44,13 @@ footer {
 footer small {
   margin: 0 auto;
 }
+
 .MenuPage {
   width: 100vw;
   height: 100vh;
   z-index: -1;
 }
+
 .startButton {
   font-family: 'Times New Roman', Times, serif;
   font-stretch: 150%;
@@ -56,9 +59,10 @@ footer small {
   padding-left: 71px;
   padding-bottom: 47px;
 }
+
 .start {
   height: 100vh;
-  color: rgb(43,72,97);
+  color: rgb(43, 72, 97);
   background-image: url('./images/Menu.jpg');
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -66,6 +70,7 @@ footer small {
   justify-content: center;
   align-items: center;
 }
+
 .egg-game {
   background-image: url("./images/EGG.jpg");
   background-size: 100vw 100vh;
@@ -75,10 +80,21 @@ footer small {
 }
 
 .egg-only {
-  height: 100vh;
-  width: 100vw;
+  height: 34vh;
+  width: 37vw;
+  margin-top: 8vh;
+  margin-left: 3vw;
 }
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
 }
