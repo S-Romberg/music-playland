@@ -11,7 +11,7 @@ class GrayEggGame extends Component {
     }
 
     handleEggClick = (event) => {
-      this.myInput.setAttribute("class", "eggclick");
+      this.myInput.setAttribute("class", "eggclick egg-only");
     }
 
     eggDone = () => {}
