@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Footer from './components/Footer';
 import GetStartedCarousel from './components/GetStartedCarousel';
 import './App.css';

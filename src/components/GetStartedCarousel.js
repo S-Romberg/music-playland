@@ -25,8 +25,8 @@ class GetStartedCarousel extends Component {
             {render ? <MenuPage onClick={this.logClick}/> :
             <div>
                 <Header />
-                <div class="music-elements">
-                    <img src={require('../images/musicelements.png')} onClick={this.logClick} />
+                <div className="music-elements">
+                    <img src={require('../images/musicelements.png')} onClick={this.logClick} alt="music elements"/>
                 </div> 
             </div>
             }

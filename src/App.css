@@ -72,7 +72,7 @@ footer small {
 }
 
 .egg-game {
-  background-image: url("./images/EGG.jpg");
+  background-image: url("./images/first-level.jpg");
   background-size: 100vw 100vh;
   height: 100vh;
   width: 100vw;
@@ -95,6 +95,34 @@ footer small {
   }
 }
 
-.hidden {
-  display: none;
+.change {
+  background-color: orange;
+}
+
+.wands {
+  display:flex;
+  justify-content: space-evenly;
+  height: 35.1vh;
+
+}
+
+.wand {
+  height: 31.4vh;
+  width: 3.2vw;
+  margin-top: 25.1vh;
+  padding-right: 1em;
+}
+
+.eggclick {
+  animation-name: eggclick;
+  /* animation-iteration-count: 1; */
+}
+
+@keyframes eggclick {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
