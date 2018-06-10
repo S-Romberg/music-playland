@@ -16,7 +16,9 @@ header h1 {
   margin: 0;
   color: black;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 3em;
+  font-size: 4em;
+  margin-bottom: -8.5em;
+  margin-top: 1em;
 }
 
 /* GetStartedCarousel */
@@ -27,8 +29,8 @@ header h1 {
 }
 
 .music-elements img {
-  height: 93vh;
-  width: 100vw;
+  height: 110vh;
+  width: 110vw;
 }
 
 footer {
@@ -160,7 +162,7 @@ footer small {
 
 .scoreboard {
   margin-top: -100vh;
-  height: 105vh;
+  height: 113vh;
   width: 100vw;
 }
 .null {
