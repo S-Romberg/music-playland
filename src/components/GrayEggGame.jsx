@@ -12,12 +12,17 @@ class GrayEggGame extends Component {
     }
 
     handleEggClick = (event) => {
-      this.myInput.setAttribute("class", "eggclick egg-only")
+      this.eggOnClick.setAttribute('class', 'eggclick egg-only')
+      this.pickWand.setAttribute('class', 'pick-wand')
       document.getElementById('audio1').play()
     }
 
     handleWandClick = (event) => {
-        console.log(event.target)
+        if (event.target.id === 'yellow') {
+           this.pickWand.innerText = 'You Got It!'
+        } else {
+            this.pickWand.innerText = 'Try Again!'
+        }
     }
 
     render() {
@@ -38,6 +43,7 @@ class GrayEggGame extends Component {
         let images = wandArray.map(image => <img
             key={image}
             src={require(`../images/wands/${image}.png`)}
+            id={image}
             alt="wand"
             className="wand"
             onClick={this.handleWandClick}/>)
@@ -51,13 +57,13 @@ class GrayEggGame extends Component {
                     className='egg-only'
                     alt="egg"
                     ref={input => {
-            this.myInput = input;
+            this.eggOnClick = input
           }}/>
-          <p className='hidden'>Pick a wand!</p>
+          <p className='hidden' ref={input => {
+            this.pickWand = input}}>Pick a wand!</p>
                 <div className='wands'>
                     {images}
                 </div>
-
             </div>
         )
     }

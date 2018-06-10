@@ -106,9 +106,9 @@ footer small {
 }
 
 .wand {
-  height: 31.4vh;
+  height: 35vh;
   width: 3.2vw;
-  margin-top: 25.1vh;
+  margin-top: 5vh;
   padding: 0 1.5em;
 }
 
@@ -129,4 +129,18 @@ footer small {
     background-color: #f71aff;
     box-shadow: 0 0 10px 10px #f71aff;
   }
+}
+
+.hidden {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
+  margin-top: 1em;
+  color: #716A6B;
+}
+
+.pick-wand {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
+  margin-top: 1em;
+  color: #ffffff;
 }
