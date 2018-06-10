@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import GrayEggGame from "./GrayEggGame"
+import GrayEggGame from "./GrayEggGame.jsx"
 
 class MenuPage extends Component{
     constructor(props){
@@ -21,13 +21,14 @@ class MenuPage extends Component{
         var renderEggGame = this.state.renderEggGame
         return(
             <div>
+                {renderEggGame ?
                 <GrayEggGame /> :
             <div className='start'>
                 <p className='startButton' onClick={this.logClick}>Start</p>
             </div>
             }
             </div>
-        )}
+    )}
     
 }
 

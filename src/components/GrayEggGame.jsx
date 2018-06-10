@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import sound from '../sounds/G.wav'
+import image from '../images/scorescreen.jpg'
 
 import Scoreboard from "./Scoreboard"
 class GrayEggGame extends Component {
@@ -7,19 +8,22 @@ class GrayEggGame extends Component {
         super(props)
         this.state = {
             render: false,
-            scoreScreen: false
+            scoreScreen: false,
+            eggSwitch: false
         }
     }
 
     handleEggClick = (event) => {
-      this.eggOnClick.setAttribute('class', 'eggclick egg-only')
+        var css = (this.props.eggSwitch === "hidden") ? "show" : "hidden";
+        this.setState({"eggSwitch":css});
+      this.eggOnClick.setAttribute('class', 'eggclick egg-only ')
       this.pickWand.setAttribute('class', 'pick-wand')
       document.getElementById('audio1').play()
     }
 
     handleWandClick = (event) => {
         if (event.target.id === 'yellow') {
-           this.setState = {scoreScreen: true}
+           document.querySelector('#scoreboard').className = 'scoreboard'
         } else {
             this.pickWand.innerText = 'Try Again!'
         }
@@ -58,20 +62,18 @@ class GrayEggGame extends Component {
                     className='egg-only'
                     alt="egg"
                     ref={input => {
-            this.eggOnClick = input
-          }}/>
-          <p className='hidden' ref={input => {
-            this.pickWand = input}}>Pick a wand!</p>
-                <div className='wands'>
+                this.eggOnClick = input
+                }}/>
+                <p className='hidden-text' ref={input => {
+                this.pickWand = input}}>Pick a wand!</p>
+                    <div className='wands'>
                     {images}
                 </div>
+                <div>
+                    <img id='scoreboard' src={image} alt='finished' className='null'/>
+                 </div>
             </div>
-        )
-    } else {
-        return (
-            <div>
-                <Scoreboard />
-            </div>
+
         )
     }
 }

@@ -53,11 +53,11 @@ footer small {
 
 .startButton {
   font-family: 'Times New Roman', Times, serif;
-  font-stretch: 150%;
   margin: 0;
-  font-size: 89px;
-  padding-left: 71px;
-  padding-bottom: 47px;
+  font-size: 8em;
+  padding-left: 94px;
+  padding-bottom: 0.5em;
+  color: #264059;
 }
 
 .start {
@@ -117,8 +117,8 @@ footer small {
   border-top-right-radius: 70%;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 37%;
-  animation: eggclick 2s infinite alternate;
-  animation-iteration-count: 10;
+  animation: eggclick 3s infinite alternate;
+  animation-iteration-count: 5;
 }
 
 @keyframes eggclick {
@@ -128,15 +128,15 @@ footer small {
   }
   25% {
     background-color: #F2A152;
-    box-shadow: 0 0 10px -5px #F2A152;
+    box-shadow: 0 0 10px 5px #F2A152;
   }
   25% {
     background-color: #99E583;
-    box-shadow: 0 0 10px -1px #99E583;
+    box-shadow: 0 0 10px 10px #99E583;
   }
   33% {
     background-color: #823696;
-    box-shadow: 0 0 10px 5px #823696;
+    box-shadow: 0 0 10px 10px #823696;
   }
   46% {
     background-color: #FEF986;
@@ -144,7 +144,7 @@ footer small {
   }
 }
 
-.hidden {
+.hidden-text {
   font-family: 'Times New Roman', Times, serif;
   font-size: 4em;
   margin-top: 1em;
@@ -158,7 +158,19 @@ footer small {
   color: #ffffff;
 }
 
-.scoreboard img {
-  height: 100vh;
+.scoreboard {
+  margin-top: -100vh;
+  height: 105vh;
   width: 100vw;
+}
+.null {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
