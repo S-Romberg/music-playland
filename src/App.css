@@ -80,8 +80,8 @@ footer small {
 }
 
 .egg-only {
-  height: 34vh;
-  width: 37vw;
+  height: 30vh;
+  width: 22vw;
   margin-top: 8vh;
   margin-left: 3vw;
 }
@@ -113,17 +113,20 @@ footer small {
 }
 
 .eggclick {
-  background-color: #aef4af;
-  border-radius: 25%;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 70%;
+  border-bottom-right-radius: 37%;
   animation: eggclick 1s infinite alternate;
   animation-iteration-count: 10;
 }
 
 @keyframes eggclick {
   from {
-    box-shadow: 0 0 10px -10px #aef4af;
+    box-shadow: 0 0 10px -10px #f71aff;
   }
   to {
-    box-shadow: 0 0 10px 10px #aef4af;
+    background-color: #f71aff;
+    box-shadow: 0 0 10px 10px #f71aff;
   }
 }

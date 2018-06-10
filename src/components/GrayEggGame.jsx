@@ -1,4 +1,5 @@
-import React, {Component} from "react"
+import React, {Component} from 'react'
+import sound from '../sounds/G.wav'
 
 // import Scoreboard from "./Scoreboard"
 class GrayEggGame extends Component {
@@ -11,14 +12,13 @@ class GrayEggGame extends Component {
     }
 
     handleEggClick = (event) => {
-      this.myInput.setAttribute("class", "eggclick egg-only");
+      this.myInput.setAttribute("class", "eggclick egg-only")
+      document.getElementById('audio1').play()
     }
 
     handleWandClick = (event) => {
         console.log(event.target)
     }
-
-    eggDone = () => {}
 
     render() {
         const wandArray = [
@@ -44,6 +44,7 @@ class GrayEggGame extends Component {
         
         return (
             <div className='egg-game'>
+                <audio id="audio1" src={sound}></audio>
                 <img
                     src={require('../images/onlyegg.png')}
                     onClick={this.handleEggClick}
@@ -52,6 +53,7 @@ class GrayEggGame extends Component {
                     ref={input => {
             this.myInput = input;
           }}/>
+          <p className='hidden'>Pick a wand!</p>
                 <div className='wands'>
                     {images}
                 </div>
