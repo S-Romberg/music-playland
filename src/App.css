@@ -53,11 +53,11 @@ footer small {
 
 .startButton {
   font-family: 'Times New Roman', Times, serif;
-  font-stretch: 150%;
   margin: 0;
-  font-size: 89px;
-  padding-left: 71px;
-  padding-bottom: 47px;
+  font-size: 8em;
+  padding-left: 94px;
+  padding-bottom: 0.5em;
+  color: #264059;
 }
 
 .start {
@@ -106,9 +106,9 @@ footer small {
 }
 
 .wand {
-  height: 31.4vh;
+  height: 35vh;
   width: 3.2vw;
-  margin-top: 25.1vh;
+  margin-top: 5vh;
   padding: 0 1.5em;
 }
 
@@ -117,16 +117,60 @@ footer small {
   border-top-right-radius: 70%;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 37%;
-  animation: eggclick 1s infinite alternate;
-  animation-iteration-count: 10;
+  animation: eggclick 3s infinite alternate;
+  animation-iteration-count: 5;
 }
 
 @keyframes eggclick {
-  from {
-    box-shadow: 0 0 10px -10px #f71aff;
+  5% {
+    background-color: #DE443F;
+    box-shadow: 0 0 10px -10px #DE443F;
   }
-  to {
-    background-color: #f71aff;
-    box-shadow: 0 0 10px 10px #f71aff;
+  25% {
+    background-color: #F2A152;
+    box-shadow: 0 0 10px 5px #F2A152;
   }
+  25% {
+    background-color: #99E583;
+    box-shadow: 0 0 10px 10px #99E583;
+  }
+  33% {
+    background-color: #823696;
+    box-shadow: 0 0 10px 10px #823696;
+  }
+  46% {
+    background-color: #FEF986;
+    box-shadow: 0 0 10px 10px #FEF986;
+  }
+}
+
+.hidden-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
+  margin-top: 1em;
+  color: #716A6B;
+}
+
+.pick-wand {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
+  margin-top: 1em;
+  color: #ffffff;
+}
+
+.scoreboard {
+  margin-top: -100vh;
+  height: 105vh;
+  width: 100vw;
+}
+.null {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

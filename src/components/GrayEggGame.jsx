@@ -1,26 +1,36 @@
 import React, {Component} from 'react'
 import sound from '../sounds/G.wav'
+import image from '../images/scorescreen.jpg'
 
-// import Scoreboard from "./Scoreboard"
+import Scoreboard from "./Scoreboard"
 class GrayEggGame extends Component {
     constructor(props) {
         super(props)
         this.state = {
             render: false,
-            eggclick: false
+            scoreScreen: false,
+            eggSwitch: false
         }
     }
 
     handleEggClick = (event) => {
-      this.myInput.setAttribute("class", "eggclick egg-only")
+        var css = (this.props.eggSwitch === "hidden") ? "show" : "hidden";
+        this.setState({"eggSwitch":css});
+      this.eggOnClick.setAttribute('class', 'eggclick egg-only ')
+      this.pickWand.setAttribute('class', 'pick-wand')
       document.getElementById('audio1').play()
     }
 
     handleWandClick = (event) => {
-        console.log(event.target)
+        if (event.target.id === 'yellow') {
+           document.querySelector('#scoreboard').className = 'scoreboard'
+        } else {
+            this.pickWand.innerText = 'Try Again!'
+        }
     }
 
-    render() {
+    render(){ 
+    if (!this.state.scoreScreen) {
         const wandArray = [
             'white',
             'black',
@@ -38,6 +48,7 @@ class GrayEggGame extends Component {
         let images = wandArray.map(image => <img
             key={image}
             src={require(`../images/wands/${image}.png`)}
+            id={image}
             alt="wand"
             className="wand"
             onClick={this.handleWandClick}/>)
@@ -51,16 +62,21 @@ class GrayEggGame extends Component {
                     className='egg-only'
                     alt="egg"
                     ref={input => {
-            this.myInput = input;
-          }}/>
-          <p className='hidden'>Pick a wand!</p>
-                <div className='wands'>
+                this.eggOnClick = input
+                }}/>
+                <p className='hidden-text' ref={input => {
+                this.pickWand = input}}>Pick a wand!</p>
+                    <div className='wands'>
                     {images}
                 </div>
-
+                <div>
+                    <img id='scoreboard' src={image} alt='finished' className='null'/>
+                 </div>
             </div>
+
         )
     }
+}
 }
 
 export default GrayEggGame
