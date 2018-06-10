@@ -17,14 +17,10 @@ class Scoreboard extends Component{
     }
 
     render(){
-        var renderNextLevel = this.state.renderNextLevel
-        return(
-            <div>
-            {renderNextLevel ?    
-            <div className='scoreboard'>
-                <img src={scoreboard} className="scoreboard-img"/>
-            </div>
-            }
+        // var renderNextLevel = this.state.renderNextLevel
+        return( 
+            <div className='scoreboard'> 
+                <img src={Scoreboard} className="scoreboard-img"/>
             </div>
         )
     }

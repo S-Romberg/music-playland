@@ -14,7 +14,7 @@ class GrayEggGame extends Component{
         var renderScoreboard = this.state.renderScoreboard
         return(
             <div>
-            {renderScoreboard ? <Scoreboard />
+            {renderScoreboard ? <Scoreboard /> :
             <div className='egg-game'>
                 <img src={require('../images/eggonly.png')} class="egg-only"/>
             </div>
