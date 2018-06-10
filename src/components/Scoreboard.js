@@ -5,14 +5,22 @@ class Scoreboard extends Component{
     constructor(props){
         super(props)
         this.state={
+            renderNextLevel: false
             
         }
     }
 
+    logClick = event => {
+        event.preventDefault()
+        this.setState({
+            renderNextLevel: !this.state.renderNextLevel
+    }
+
     render(){
-        return(
-            <div className='scoreboard'>
-                <img src={scoreboard} className="scoreboard-img"/>
+        // var renderNextLevel = this.state.renderNextLevel
+        return( 
+            <div className='scoreboard'> 
+                <img src={Scoreboard} className="scoreboard-img"/>
             </div>
         )
     }

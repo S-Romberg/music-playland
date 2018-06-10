@@ -72,7 +72,7 @@ footer small {
 }
 
 .egg-game {
-  background-image: url("./images/first-level.jpg");
+  background-image: url("./images/egg-with-no-wands.jpg");
   background-size: 100vw 100vh;
   height: 100vh;
   width: 100vw;
@@ -100,29 +100,30 @@ footer small {
 }
 
 .wands {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   height: 35.1vh;
-
 }
 
 .wand {
   height: 31.4vh;
   width: 3.2vw;
   margin-top: 25.1vh;
-  padding-right: 1em;
+  padding: 0 1.5em;
 }
 
 .eggclick {
-  animation-name: eggclick;
-  /* animation-iteration-count: 1; */
+  background-color: #aef4af;
+  border-radius: 25%;
+  animation: eggclick 1s infinite alternate;
+  animation-iteration-count: 10;
 }
 
 @keyframes eggclick {
   from {
-    transform: rotate(0deg);
+    box-shadow: 0 0 10px -10px #aef4af;
   }
   to {
-    transform: rotate(180deg);
+    box-shadow: 0 0 10px 10px #aef4af;
   }
 }

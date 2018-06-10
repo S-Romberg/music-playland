@@ -14,6 +14,10 @@ class GrayEggGame extends Component {
       this.myInput.setAttribute("class", "eggclick egg-only");
     }
 
+    handleWandClick = (event) => {
+        console.log(event.target)
+    }
+
     eggDone = () => {}
 
     render() {
@@ -36,7 +40,7 @@ class GrayEggGame extends Component {
             src={require(`../images/wands/${image}.png`)}
             alt="wand"
             className="wand"
-            onClick={this.handleClick}/>)
+            onClick={this.handleWandClick}/>)
         
         return (
             <div className='egg-game'>
