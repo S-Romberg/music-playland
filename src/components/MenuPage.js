@@ -19,7 +19,6 @@ class MenuPage extends Component{
 
     render(){
         var renderEggGame = this.state.renderEggGame
-        if (){
         return(
             <div>
                 <GrayEggGame /> :
@@ -29,7 +28,7 @@ class MenuPage extends Component{
             }
             </div>
         )}
-    }
+    
 }
 
 export default MenuPage

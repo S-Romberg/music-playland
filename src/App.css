@@ -117,17 +117,30 @@ footer small {
   border-top-right-radius: 70%;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 37%;
-  animation: eggclick 1s infinite alternate;
+  animation: eggclick 2s infinite alternate;
   animation-iteration-count: 10;
 }
 
 @keyframes eggclick {
-  from {
-    box-shadow: 0 0 10px -10px #f71aff;
+  5% {
+    background-color: #DE443F;
+    box-shadow: 0 0 10px -10px #DE443F;
   }
-  to {
-    background-color: #f71aff;
-    box-shadow: 0 0 10px 10px #f71aff;
+  25% {
+    background-color: #F2A152;
+    box-shadow: 0 0 10px -5px #F2A152;
+  }
+  25% {
+    background-color: #99E583;
+    box-shadow: 0 0 10px -1px #99E583;
+  }
+  33% {
+    background-color: #823696;
+    box-shadow: 0 0 10px 5px #823696;
+  }
+  46% {
+    background-color: #FEF986;
+    box-shadow: 0 0 10px 10px #FEF986;
   }
 }
 
