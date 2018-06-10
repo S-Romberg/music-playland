@@ -145,7 +145,11 @@ footer small {
   color: #ffffff;
 }
 
-.scoreboard img {
-  height: 100vh;
+.scoreboard {
+  margin-top: -100vh;
+  height: 105vh;
   width: 100vw;
+}
+.null {
+  display: none;
 }
