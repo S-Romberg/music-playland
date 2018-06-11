@@ -20,9 +20,8 @@ class Scoreboard extends Component{
             renderNextLevel: !this.state.renderNextLevel
 <<<<<<< HEAD
         })
-=======
+
     })
->>>>>>> aaa0f1e42dd1f72fdb6f146c2beffb8cf6c55384
     }
 
 
