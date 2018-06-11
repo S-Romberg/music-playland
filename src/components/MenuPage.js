@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import GrayEggGame from "./GrayEggGame.jsx"
-
 class MenuPage extends Component{
     constructor(props){
         super(props)

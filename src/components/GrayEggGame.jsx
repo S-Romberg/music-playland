@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import sound from '../sounds/G.wav'
-import image from '../images/scorescreen.jpg'
+import image from '../images/scorescreen.png'
 
 import Scoreboard from "./Scoreboard"
 class GrayEggGame extends Component {
