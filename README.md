@@ -11,7 +11,6 @@ Alyssa Ebert
 
 Spencer Romberg
 
-#### Project Manager:
 Fion Wan
 
 #### Created with:
