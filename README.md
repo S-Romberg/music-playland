@@ -8,6 +8,7 @@ Built in essentially one day, this functioning MVP helps kids learn music in a r
 
 #### Developers: 
 Alyssa Ebert
+
 Spencer Romberg
 
 #### Project Manager:
