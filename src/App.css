@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 header {
   grid-row: 1 / 2;
   display: grid;
@@ -88,19 +87,6 @@ footer small {
   margin-left: 3vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.change {
-  background-color: orange;
-}
-
 .wands {
   display: flex;
   justify-content: space-evenly;
@@ -161,8 +147,7 @@ footer small {
 }
 
 .scoreboard {
-  margin-top: -100vh;
-  height: 113vh;
+  height: 100vh;
   width: 100vw;
 }
 .null {

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-// import Header from './components/Header';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import './App.css';
+
 import Footer from './components/Footer';
 import GetStartedCarousel from './components/GetStartedCarousel';
-import './App.css';
+import GrayEggGame from "./components/GrayEggGame"
+import MenuPage from './components/MenuPage'
+import Scoreboard from './components/Scoreboard';
+
 
 class App extends Component {
   constructor(props){
@@ -15,9 +20,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <main>
-          <GetStartedCarousel />
-        </main>
+        <BrowserRouter>
+          <main>
+          <Switch>
+            <Route exact path='/' component={() => <GetStartedCarousel /> }/>
+            <Route exact path='/game' component={() => <GrayEggGame />} />
+            <Route exact path='/menu' component={() => <MenuPage />} />
+            <Route exact path='/scoreboard' component={() => <Scoreboard />} />
+          </Switch>
+          </main>
+        </BrowserRouter>
         <Footer />          
       </div>
     );

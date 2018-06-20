@@ -1,35 +1,19 @@
 import React, { Component } from "react"
-import MenuPage from './MenuPage'
+import { Link } from 'react-router-dom'
 import Header from './Header'
+
 
 class GetStartedCarousel extends Component {
 
-    constructor(props){
-        super(props)
-        this.state={    
-            render: false
-        }
-    }
-    
-    logClick = event => {
-        event.preventDefault()
-        this.setState({
-            render: !this.state.render
-        })
-    }
-
     render(){
-        var render = this.state.render
         return(
             <div>
-            {render ? <MenuPage onClick={this.logClick}/> :
-            <div>
                 <Header />
-                <div className="music-elements">
-                    <img src={require('../images/musicelements.png')} onClick={this.logClick} alt="music elements"/>
-                </div> 
-            </div>
-            }
+                <Link to='/menu'>
+                    <div className="music-elements">
+                        <img src={require('../images/musicelements.png')} onClick={this.logClick} alt="music elements"/>
+                    </div> 
+                </Link>
             </div>
         )
     }

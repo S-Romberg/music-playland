@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import sound from '../sounds/G.wav'
 import image from '../images/scorescreen.png'
 
@@ -7,8 +8,6 @@ class GrayEggGame extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            render: false,
-            scoreScreen: false,
             eggSwitch: false
         }
     }
@@ -23,14 +22,13 @@ class GrayEggGame extends Component {
 
     handleWandClick = (event) => {
         if (event.target.id === 'yellow') {
-           document.querySelector('#scoreboard').className = 'scoreboard'
+            window.location.href = '/scoreboard'
         } else {
             this.pickWand.innerText = 'Try Again!'
         }
     }
 
     render(){ 
-    if (!this.state.scoreScreen) {
         const wandArray = [
             'white',
             'black',
@@ -69,14 +67,10 @@ class GrayEggGame extends Component {
                     <div className='wands'>
                     {images}
                 </div>
-                <div>
-                    <img id='scoreboard' src={image} alt='finished' className='null'/>
-                 </div>
             </div>
 
         )
     }
-}
 }
 
 export default GrayEggGame
